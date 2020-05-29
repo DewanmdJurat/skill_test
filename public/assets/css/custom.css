@@ -1,0 +1,275 @@
+/* Add here all your CSS customizations */
+.dataTables_wrapper .dataTables_filter input {
+    width: 85% !important;
+}
+
+.filter-checkbox-area {
+    max-height: 134px;
+    overflow-x: auto;
+}
+
+.filter-checkbox-sidebar{
+    max-height: 150px;
+    overflow-x: auto;
+}
+
+.filter-checkbox-sidebar label{
+    display: block;
+}
+.btn-rounded {
+    border-radius: 10em;
+}
+.header-fixed {
+    width: 100% 
+}
+
+.header-fixed > thead,
+.header-fixed > tbody,
+.header-fixed > thead > tr,
+.header-fixed > tbody > tr,
+.header-fixed > thead > tr > th,
+.header-fixed > tbody > tr > td {
+    display: block;
+}
+
+.header-fixed > tbody > tr:after,
+.header-fixed > thead > tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.header-fixed > tbody {
+    overflow-y: auto;
+    height: 150px;
+}
+
+.header-fixed > tbody > tr > td,
+.header-fixed > thead > tr > th {
+    float: left;
+}
+
+.order-small-orders-sidebar {
+    max-height: 200px;
+    overflow-x: auto;
+}
+
+.filter-checkbox-sidebar-edit{
+    max-height: 150px;
+    overflow-x: auto;
+}
+
+.filter-checkbox-sidebar-edit label{
+    display: block;
+}
+
+.order-details-view {
+    max-height: 540px;
+    overflow-x: auto;
+}
+
+.order-details-edit {
+    max-height: 540px;
+    overflow-x: auto;
+}
+
+.order-product-delete {
+    text-align: center;
+}
+
+.order-product-delete img{
+    width: 58%;
+    margin-top: 5px;
+}
+
+.order-product-add img{
+    width: 100%;
+}
+
+.select-customer-edit {
+    border: 1px solid #dadada;
+    
+    max-height: 130px;
+    overflow-y: auto;
+}
+
+.select-customer-edit-singl-row {
+    box-sizing: border-box;
+    padding: 4px 0px;
+    cursor: pointer;
+}
+
+.select-product-search {
+    cursor: pointer;
+}
+
+.order-single-area {
+    display: none;
+}
+
+.order-edit-single-area {
+    display: none;
+}
+
+.order-list-single-row:hover {
+    background: #e5f1ff;
+    cursor: pointer;
+}
+
+.order-list-single-row {
+    padding: 4px 0px;
+}
+
+.order-status-color {
+    padding: 1px 7px;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.payment-status-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+#orderTableHead tr th {
+    font-size: 14px;
+    border-bottom: none;
+}
+
+.orderSelected {
+    background: #e5f1ff;
+}
+
+.SelectTextPending, .SelectTextProcessing {
+    color: #000000;
+}
+
+.SelectTextDispatch , .SelectTextComplete {
+    color: #00CC00;
+}
+
+.SelectTextCancelle, .SelectTextFailed, .SelectTextDeclined, .SelectTextRefunded {
+    color: #CC0000;
+}
+
+.individual-billing-address {
+    min-height: 231px;
+}
+
+.individual-billing-address p {
+    margin-bottom: 4px;
+}
+
+.individual-shipping-address {
+    min-height: 231px;
+}
+
+.individual-shipping-address p {
+    margin-bottom: 4px;
+}
+
+#saveOrder {
+    display: none;
+}
+
+#deleteOrder {
+    display: none;
+}
+
+.order-billing-address-edit label{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.order-shipping-address-edit label{
+    font-size: 10px;
+    font-weight: 500;
+}
+
+#addressBillingEdit {
+    display: none;
+}
+
+#addressShippingEdit {
+    display: none;
+}
+
+#customerSelect {
+    display: none;
+}
+
+#orderItemAdd {
+    display: none;
+}
+
+#orderDiscount {
+    display: none;
+}
+
+.selected-order-row {
+    background: #e5f1ff;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.product-list-varianion-header {
+    padding: 15px;
+    font-size: 19px;
+}
+
+.select-order-product-single {
+    padding: 10px;
+}
+.select-order-product-single:hover {
+    background: #e5f1ff;
+}
+
+.hide-small-view {
+    display: none;
+}
+
+.error{
+ border:1px solid red;
+}
+
+.single-order-row-select:hover {
+    background: #e5f1ff;
+}
+
+#orderListFooter {
+    display: none;
+}
+
+#expand-order-area {
+    position: absolute;
+    right: -24px;
+    top: -2px;
+    cursor: pointer;
+    display: none;
+}
+
+#expand-order-area i{
+    font-size: 20px;
+}
+
+.cost-area {
+    padding:10px 10px;
+    margin: 10px 0px;
+    border: 1px solid #ced4da;
+}
+
+.invoice-show label{
+    color: #1f1f1f;
+}
