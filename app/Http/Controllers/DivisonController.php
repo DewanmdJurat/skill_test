@@ -131,7 +131,7 @@ class DivisonController extends Controller
         $division->division_name    =  request('division_name');
         if($division->save())
         {
-            $notification = array('message' => 'Information Deleted Successfully', 'alert-type'=> 'success');
+            $notification = array('message' => 'Information Updated Successfully', 'alert-type'=> 'success');
         }
         else 
         {
