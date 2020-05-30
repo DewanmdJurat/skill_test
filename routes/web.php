@@ -29,6 +29,7 @@ Route::group(['prefix'=>'division'], function ()
     Route::get('/edit/{id}', 'DivisonController@edit')->name('division.edit');
     Route::post('/update', 'DivisonController@update')->name('division.update');
     Route::get('/delete/{id}', 'DivisonController@delete')->name('division.delete');
+    Route::post('/inline/update', 'DivisonController@inlineUpdate')->name('division.inline.update');
 });
 
 Route::group(['prefix'=>'district'], function ()

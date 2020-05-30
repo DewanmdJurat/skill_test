@@ -216,6 +216,37 @@
                     }
                 });
             });
+
+            $(document).on('click', '#DivisionTable tr', function() {
+                console.log('sasd');
+                $(this).find('.division-name-input').css('display', 'block');
+                $(this).find('.division-name-input').prop({type:'text'}).focus();
+                $(this).find('.division-name-inline').css('display','none');
+            });
+            $('#DivisionTable').on('focusout', '.division-name-input', function() {
+                $(this).css('display','none');
+                $(this).closest('.division-inline-edit').find('.division-name-inline').css('display','block');
+                let division_id     = $(this).attr('data-division-inline-id');
+                let division_name   = $(this).val();
+                // console.log(division_id, division_name);
+                // divisionInlineUpdate();
+                $.ajax({
+                    url:"{{ route('division.inline.update') }}",
+                    headers:{ 
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') 
+                    },
+                    type: 'post',
+                    dataType: 'json',
+                    data: {
+                        id: division_id,
+                        division_name: division_name
+                    },
+                    success: function(data){
+                        toastr.success(data.message);
+                        divisionLoad();
+                    }
+                });
+            });
         });
 
         function divisionLoad() {
@@ -240,8 +271,8 @@
                         
                         $.each(data.divisions, function(i, division) {
                             division_list +=`<tr data-division-id="${division.id}">
-                                <td>${division.id}</td>
-                                <td>${division.division_name}</td>
+                                <td>${division.id} </td>
+                                <td class="division-inline-edit"><span class="division-name-inline">${division.division_name}</span> <input type="hidden" class="form-control division-name-input" data-division-inline-id="${division.id}" name="division_name" value="${division.division_name}"> </td>
                                 <td class="actions">
                                     <a href="" data-toggle="modal" class="on-default btn btn-outline-info btn-sm edit-row division-edit-row" data-edit-division-id="${division.id}"><i class="fas fa-pencil-alt"></i></a>
                                     <a href="" class="on-default btn btn-outline-danger btn-sm delete-division" data-delete-division-id="${division.id}"><i class="far fa-trash-alt"></i></a>
@@ -269,5 +300,6 @@
                     }
                 });
         }
+
     </script>
 @endsection

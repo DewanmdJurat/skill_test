@@ -121,4 +121,22 @@ class DivisonController extends Controller
         }
         return response()->json($notification);
     }
+
+    public function inlineUpdate()
+    {
+        $id       = request('id');
+        $user_id  = Auth::user()->id;
+
+        $division                   = Division::where('created_by', $user_id)->where('id', $id)->first();
+        $division->division_name    =  request('division_name');
+        if($division->save())
+        {
+            $notification = array('message' => 'Information Deleted Successfully', 'alert-type'=> 'success');
+        }
+        else 
+        {
+            $notification = array('message' => 'Something went wrong!', 'alert-type'=> 'error');
+        }
+        return response()->json($notification);
+    }
 }
